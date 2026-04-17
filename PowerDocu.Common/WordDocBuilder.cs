@@ -917,7 +917,7 @@ namespace PowerDocu.Common
         {
             // Step 1, calculate MD5 hash from input
             MD5 md5 = MD5.Create();
-            byte[] inputBytes = Encoding.ASCII.GetBytes(input);
+            byte[] inputBytes = Encoding.UTF8.GetBytes(input);
             byte[] hashBytes = md5.ComputeHash(inputBytes);
 
             // Step 2, convert byte array to hex string
